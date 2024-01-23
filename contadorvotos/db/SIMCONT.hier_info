@@ -1,0 +1,281 @@
+|SIMCONT
+L2 <= inst21.DB_MAX_OUTPUT_PORT_TYPE
+c2 => inst1.IN0
+contar => inst1.IN1
+contar => inst2.IN1
+contar => inst3.IN1
+contar => ins.IN1
+L3 <= inst20.DB_MAX_OUTPUT_PORT_TYPE
+c3 => inst2.IN0
+L4 <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+c4 => inst3.IN0
+L1 <= inst23.DB_MAX_OUTPUT_PORT_TYPE
+c1 => ins.IN0
+v1 <= mux_4to1:inst18.Z
+S3 => mux_4to1:inst18.S0
+S3 => mux_4to1:inst19.S0
+S4 => mux_4to1:inst18.S1
+S4 => mux_4to1:inst19.S1
+v0 <= mux_4to1:inst19.Z
+m1 <= inst52.DB_MAX_OUTPUT_PORT_TYPE
+m0 <= inst53.DB_MAX_OUTPUT_PORT_TYPE
+nl1 <> master_slave_jk:inst64.q1
+nl2 <> master_slave_jk:inst64.q2
+S1 => ~NO_FANOUT~
+S2 => ~NO_FANOUT~
+
+
+|SIMCONT|mux_4to1:inst18
+A => Z.DATAB
+B => Z.DATAB
+C => Z.DATAB
+D => Z.DATAA
+S0 => process_0.IN0
+S0 => process_0.IN0
+S0 => process_0.IN0
+S1 => process_0.IN1
+S1 => process_0.IN1
+S1 => process_0.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SIMCONT|master_slave_jk:inst17
+j => z1x.IN1
+k => z1x.IN1
+clk => q1x$latch.LATCH_ENABLE
+clk => q1$latch.LATCH_ENABLE
+clk => z1x$latch.LATCH_ENABLE
+clk => q2$latch.LATCH_ENABLE
+clk => z2x$latch.LATCH_ENABLE
+clk => q2x$latch.LATCH_ENABLE
+q1 <> q1
+q1x <> q1x
+z1x <> z1x
+q2 <> q2
+q2x <> q2x
+z2x <> z2x
+
+
+|SIMCONT|master_slave_jk:inst14
+j => z1x.IN1
+k => z1x.IN1
+clk => q1x$latch.LATCH_ENABLE
+clk => q1$latch.LATCH_ENABLE
+clk => z1x$latch.LATCH_ENABLE
+clk => q2$latch.LATCH_ENABLE
+clk => z2x$latch.LATCH_ENABLE
+clk => q2x$latch.LATCH_ENABLE
+q1 <> q1
+q1x <> q1x
+z1x <> z1x
+q2 <> q2
+q2x <> q2x
+z2x <> z2x
+
+
+|SIMCONT|master_slave_jk:inst15
+j => z1x.IN1
+k => z1x.IN1
+clk => q1x$latch.LATCH_ENABLE
+clk => q1$latch.LATCH_ENABLE
+clk => z1x$latch.LATCH_ENABLE
+clk => q2$latch.LATCH_ENABLE
+clk => z2x$latch.LATCH_ENABLE
+clk => q2x$latch.LATCH_ENABLE
+q1 <> q1
+q1x <> q1x
+z1x <> z1x
+q2 <> q2
+q2x <> q2x
+z2x <> z2x
+
+
+|SIMCONT|master_slave_jk:inst16
+j => z1x.IN1
+k => z1x.IN1
+clk => q1x$latch.LATCH_ENABLE
+clk => q1$latch.LATCH_ENABLE
+clk => z1x$latch.LATCH_ENABLE
+clk => q2$latch.LATCH_ENABLE
+clk => z2x$latch.LATCH_ENABLE
+clk => q2x$latch.LATCH_ENABLE
+q1 <> q1
+q1x <> q1x
+z1x <> z1x
+q2 <> q2
+q2x <> q2x
+z2x <> z2x
+
+
+|SIMCONT|mux_4to1:inst19
+A => Z.DATAB
+B => Z.DATAB
+C => Z.DATAB
+D => Z.DATAA
+S0 => process_0.IN0
+S0 => process_0.IN0
+S0 => process_0.IN0
+S1 => process_0.IN1
+S1 => process_0.IN1
+S1 => process_0.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|SIMCONT|7485:inst42
+a[0] => f7485:sub.a[0]
+a[1] => f7485:sub.a[1]
+a[2] => f7485:sub.a[2]
+a[3] => f7485:sub.a[3]
+b[0] => f7485:sub.b[0]
+b[1] => f7485:sub.b[1]
+b[2] => f7485:sub.b[2]
+b[3] => f7485:sub.b[3]
+agbi => f7485:sub.agbi
+albi => f7485:sub.albi
+aebi => f7485:sub.aebi
+agbo <= f7485:sub.agbo
+albo <= f7485:sub.albo
+aebo <= f7485:sub.aebo
+
+
+|SIMCONT|7485:inst42|f7485:sub
+ALBO <= 87.DB_MAX_OUTPUT_PORT_TYPE
+AGBI => 96.IN0
+A0 => 90.IN0
+A0 => 104.IN0
+A0 => 103.IN1
+B0 => 90.IN1
+B0 => 97.IN0
+A1 => 89.IN0
+A1 => 112.IN0
+A1 => 104.IN1
+B1 => 89.IN1
+B1 => 95.IN0
+A2 => 91.IN0
+A2 => 129.IN0
+A2 => 105.IN1
+B2 => 91.IN1
+B2 => 100.IN0
+A3 => 92.IN0
+A3 => 114.IN0
+A3 => 129.IN1
+B3 => 92.IN1
+B3 => 99.IN0
+AEBI => 93.IN0
+AEBI => 108.IN0
+AEBO <= 108.DB_MAX_OUTPUT_PORT_TYPE
+AGBO <= 86.DB_MAX_OUTPUT_PORT_TYPE
+ALBI => 134.IN0
+
+
+|SIMCONT|7485:inst4
+a[0] => f7485:sub.a[0]
+a[1] => f7485:sub.a[1]
+a[2] => f7485:sub.a[2]
+a[3] => f7485:sub.a[3]
+b[0] => f7485:sub.b[0]
+b[1] => f7485:sub.b[1]
+b[2] => f7485:sub.b[2]
+b[3] => f7485:sub.b[3]
+agbi => f7485:sub.agbi
+albi => f7485:sub.albi
+aebi => f7485:sub.aebi
+agbo <= f7485:sub.agbo
+albo <= f7485:sub.albo
+aebo <= f7485:sub.aebo
+
+
+|SIMCONT|7485:inst4|f7485:sub
+ALBO <= 87.DB_MAX_OUTPUT_PORT_TYPE
+AGBI => 96.IN0
+A0 => 90.IN0
+A0 => 104.IN0
+A0 => 103.IN1
+B0 => 90.IN1
+B0 => 97.IN0
+A1 => 89.IN0
+A1 => 112.IN0
+A1 => 104.IN1
+B1 => 89.IN1
+B1 => 95.IN0
+A2 => 91.IN0
+A2 => 129.IN0
+A2 => 105.IN1
+B2 => 91.IN1
+B2 => 100.IN0
+A3 => 92.IN0
+A3 => 114.IN0
+A3 => 129.IN1
+B3 => 92.IN1
+B3 => 99.IN0
+AEBI => 93.IN0
+AEBI => 108.IN0
+AEBO <= 108.DB_MAX_OUTPUT_PORT_TYPE
+AGBO <= 86.DB_MAX_OUTPUT_PORT_TYPE
+ALBI => 134.IN0
+
+
+|SIMCONT|7485:inst7
+a[0] => f7485:sub.a[0]
+a[1] => f7485:sub.a[1]
+a[2] => f7485:sub.a[2]
+a[3] => f7485:sub.a[3]
+b[0] => f7485:sub.b[0]
+b[1] => f7485:sub.b[1]
+b[2] => f7485:sub.b[2]
+b[3] => f7485:sub.b[3]
+agbi => f7485:sub.agbi
+albi => f7485:sub.albi
+aebi => f7485:sub.aebi
+agbo <= f7485:sub.agbo
+albo <= f7485:sub.albo
+aebo <= f7485:sub.aebo
+
+
+|SIMCONT|7485:inst7|f7485:sub
+ALBO <= 87.DB_MAX_OUTPUT_PORT_TYPE
+AGBI => 96.IN0
+A0 => 90.IN0
+A0 => 104.IN0
+A0 => 103.IN1
+B0 => 90.IN1
+B0 => 97.IN0
+A1 => 89.IN0
+A1 => 112.IN0
+A1 => 104.IN1
+B1 => 89.IN1
+B1 => 95.IN0
+A2 => 91.IN0
+A2 => 129.IN0
+A2 => 105.IN1
+B2 => 91.IN1
+B2 => 100.IN0
+A3 => 92.IN0
+A3 => 114.IN0
+A3 => 129.IN1
+B3 => 92.IN1
+B3 => 99.IN0
+AEBI => 93.IN0
+AEBI => 108.IN0
+AEBO <= 108.DB_MAX_OUTPUT_PORT_TYPE
+AGBO <= 86.DB_MAX_OUTPUT_PORT_TYPE
+ALBI => 134.IN0
+
+
+|SIMCONT|master_slave_jk:inst64
+j => z1x.IN1
+k => z1x.IN1
+clk => q1x$latch.LATCH_ENABLE
+clk => q1$latch.LATCH_ENABLE
+clk => z1x$latch.LATCH_ENABLE
+clk => q2$latch.LATCH_ENABLE
+clk => z2x$latch.LATCH_ENABLE
+clk => q2x$latch.LATCH_ENABLE
+q1 <> q1
+q1x <> q1x
+z1x <> z1x
+q2 <> q2
+q2x <> q2x
+z2x <> z2x
+
+
